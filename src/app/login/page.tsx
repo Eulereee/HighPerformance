@@ -55,14 +55,14 @@ function LoginForm() {
           <button
             formAction={signInAction}
             disabled={signingIn || signingUp}
-            className="flex-1 rounded-lg bg-white px-4 py-2 font-medium text-black disabled:opacity-50"
+            className="flex-1 rounded-lg bg-blue-600 px-4 py-2 font-medium text-white transition hover:bg-blue-700 disabled:opacity-50"
           >
             {signingIn ? 'Signing in…' : 'Sign in'}
           </button>
           <button
             formAction={signUpAction}
             disabled={signingIn || signingUp}
-            className="flex-1 rounded-lg border border-white/20 px-4 py-2 font-medium disabled:opacity-50"
+            className="flex-1 rounded-lg border border-black/20 px-4 py-2 font-medium transition hover:bg-black/5 disabled:opacity-50 dark:border-white/25 dark:hover:bg-white/10"
           >
             {signingUp ? 'Creating…' : 'Create account'}
           </button>
@@ -82,7 +82,7 @@ function Field({
       <span className="mb-1 block text-sm font-medium">{label}</span>
       <input
         {...props}
-        className="w-full rounded-lg border border-white/15 bg-transparent px-3 py-2 outline-none focus:border-white/40"
+        className="w-full rounded-lg border border-black/20 bg-white px-3 py-2 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 dark:border-white/20 dark:bg-white/5 dark:focus:border-blue-400"
       />
       {hint && <span className="mt-1 block text-xs opacity-60">{hint}</span>}
     </label>

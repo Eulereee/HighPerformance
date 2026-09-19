@@ -31,7 +31,7 @@ export default async function TestConnectionPage() {
           Supabase answered, so your keys are right — the problem is in the
           database.
         </p>
-        <pre className="overflow-x-auto rounded bg-black/40 p-3 text-xs">
+        <pre className="overflow-x-auto rounded bg-black/10 p-3 text-xs dark:bg-black/40">
           {error.message}
         </pre>
         <p className="mt-3 text-sm opacity-80">
@@ -48,7 +48,7 @@ export default async function TestConnectionPage() {
       status="ok"
       heading={`Connected — ${topics?.length ?? 0} topics found`}
     >
-      <ul className="divide-y divide-white/10">
+      <ul className="divide-y divide-black/10 dark:divide-white/10">
         {topics?.map((topic) => (
           <li key={topic.slug} className="flex items-baseline gap-3 py-2">
             <span className="w-8 shrink-0 text-xs opacity-60">
